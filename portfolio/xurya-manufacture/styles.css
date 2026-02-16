@@ -1,0 +1,60 @@
+:root {
+  --bg: #0c1512;
+  --bg-alt: #111c18;
+  --text: #f4f2ec;
+  --muted: rgba(244, 242, 236, 0.7);
+  --accent: #f2b35c;
+  --accent-2: #7bdca0;
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 30px 70px rgba(5, 10, 8, 0.55);
+}
+
+body {
+  background: radial-gradient(900px 600px at 80% 10%, rgba(242, 179, 92, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 10% 30%, rgba(123, 220, 160, 0.15), transparent 60%),
+    var(--bg);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.meter {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  width: 72%;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.module {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.module span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}

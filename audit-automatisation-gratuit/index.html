@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audit Automatisation Gratuit — MXL.DIGITAL</title>
+    <meta
+      name="description"
+      content="Audit gratuit pour identifier les opportunités d'automatisation et d'IA dans votre entreprise."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <canvas id="starfall" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/">MXL.DIGITAL</a>
+        <nav class="nav-links">
+          <a href="/#services">Services</a>
+          <a href="/#processus">Processus</a>
+          <a href="/#portfolio">Portfolio</a>
+          <a href="/#roi">ROI</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="/">Retour accueil</a>
+          <a class="btn btn-primary" href="#audit-form">Lancer l'audit</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="section page-hero">
+        <div class="container hero-grid">
+          <div class="hero-content" data-reveal>
+            <span class="badge">Audit Automatisation Gratuit</span>
+            <h1>Identifiez vos opportunités IA en 30 minutes.</h1>
+            <p>
+              Obtenez une cartographie claire de vos tâches manuelles, des quick wins à activer et d'un plan
+              d'action priorisé.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#audit-form">Réserver mon audit</a>
+              <a class="btn btn-secondary" href="/outil-de-calcul-de-rentabilite-avec-automatisation-et-ia/">
+                Estimer mon ROI
+              </a>
+            </div>
+            <p class="note">Audit offert, sans engagement. Compte rendu en 48h.</p>
+          </div>
+          <div class="hero-visual" data-reveal>
+            <div class="glass-card">
+              <h3>Ce que vous recevez</h3>
+              <ul>
+                <li>Cartographie des processus à fort impact</li>
+                <li>Priorisation des automatisations (score ROI)</li>
+                <li>Recommandations d'outils et d'architecture IA</li>
+                <li>Plan d'action en 90 jours</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container audit-grid">
+          <div class="audit-card" data-reveal>
+            <h2>Pourquoi cet audit ?</h2>
+            <p>
+              Nous analysons vos flux actuels pour identifier ce qui peut être automatisé rapidement, où l'IA peut
+              générer des gains immédiats, et comment sécuriser les données.
+            </p>
+            <ul>
+              <li>Analyse des tâches répétitives et coûteuses</li>
+              <li>Détection des points de friction client</li>
+              <li>Scénarios d'automatisation priorisés</li>
+              <li>Estimation du temps et du budget</li>
+            </ul>
+          </div>
+
+          <div class="audit-card" data-reveal>
+            <h2>Demande d'audit</h2>
+            <form id="audit-form" class="form-grid">
+              <label>
+                Nom *
+                <input class="input" type="text" id="nom" name="nom" placeholder="Votre nom" required />
+              </label>
+              <label>
+                Prénom *
+                <input class="input" type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+              </label>
+              <label>
+                Email *
+                <input class="input" type="email" id="email" name="email" placeholder="vous@email.com" required />
+              </label>
+              <label>
+                Nom de l'entreprise *
+                <input class="input" type="text" id="entreprise" name="entreprise" placeholder="Nom de l'entreprise" required />
+              </label>
+              <label>
+                Site internet de l'entreprise
+                <input
+                  class="input"
+                  type="url"
+                  id="site_internet"
+                  name="site_internet"
+                  placeholder="https://exemple.com"
+                />
+              </label>
+              <label>
+                LinkedIn / Instagram, ou autre réseau social (donner un seul)
+                <input
+                  class="input"
+                  type="text"
+                  id="reseaux_sociaux"
+                  name="reseaux_sociaux"
+                  placeholder="@votre_compte ou lien"
+                />
+              </label>
+              <div id="audit-status" class="status" role="status" aria-live="polite"></div>
+              <button class="btn btn-primary" type="submit">Recevoir mon audit gratuit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>MXL.DIGITAL</strong>
+          <div>Agence Web en Automatisation & IA</div>
+        </div>
+        <div class="footer-links">
+          <a href="/">Accueil</a>
+          <a href="/outil-de-calcul-de-rentabilite-avec-automatisation-et-ia/">Calcul ROI</a>
+          <a href="/#contact">Prendre RDV</a>
+        </div>
+        <div>© 2026 MXL.DIGITAL. Tous droits réservés.</div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

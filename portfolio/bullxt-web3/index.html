@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BullXT - Construisez votre Univers Web3</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#a855f7",
+              secondary: "#d946ef",
+              "background-light": "#f3f4f6",
+              "background-dark": "#050511",
+              "card-dark": "#13132b",
+              "card-light": "#ffffff",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            backgroundImage: {
+              "hero-glow": "radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.4) 0%, rgba(5, 5, 17, 0) 50%)",
+              "feature-glow": "radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%)",
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .glass-panel {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0f1f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #33334d;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4d4d66;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased transition-colors duration-300">
+    <header class="fixed w-full z-50 top-0 transition-all duration-300 glass-panel bg-white/80 dark:bg-background-dark/70 border-b border-gray-200 dark:border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center">
+              <span class="text-white font-bold text-lg">B</span>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">BullXT</span>
+          </div>
+          <nav class="hidden md:flex gap-8">
+            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">À propos</a>
+            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Marché</a>
+            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Intégration</a>
+            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Tarifs</a>
+            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Blogs</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 transition-colors"
+              onclick="document.documentElement.classList.toggle('dark')"
+            >
+              <span class="material-icons-outlined text-xl dark:hidden">dark_mode</span>
+              <span class="material-icons-outlined text-xl hidden dark:block">light_mode</span>
+            </button>
+            <a
+              class="hidden sm:inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all transform hover:scale-105"
+              href="#"
+            >
+              Commencer
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-20 overflow-hidden">
+      <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-32">
+        <div class="absolute top-0 left-0 w-full h-[800px] bg-hero-glow pointer-events-none opacity-80 dark:opacity-100"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
+            Construisez votre univers Web3 <br class="hidden md:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-pink-500">Facilement</span>
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400">
+            Propulsez votre voyage dans le Web3 avec des outils intuitifs, une intégration transparente et des solutions sécurisées.
+          </p>
+          <div class="mt-10 max-w-md mx-auto relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <form class="relative flex items-center bg-white dark:bg-white/10 backdrop-blur-md rounded-full p-1.5 border border-gray-200 dark:border-white/20 shadow-lg">
+              <input
+                class="flex-1 bg-transparent border-none focus:ring-0 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-2 text-sm md:text-base outline-none w-full"
+                placeholder="Votre adresse email"
+                required=""
+                type="email"
+              />
+              <button
+                class="flex-shrink-0 bg-primary hover:bg-secondary text-white text-sm md:text-base font-medium py-2 px-6 rounded-full transition-colors shadow-md"
+                type="button"
+              >
+                Commencer
+              </button>
+            </form>
+          </div>
+          <div class="mt-20 relative mx-auto max-w-4xl transform hover:scale-[1.01] transition-transform duration-500">
+            <div class="relative bg-white dark:bg-[#15152a]/80 glass-panel rounded-2xl border border-gray-200 dark:border-white/10 p-6 shadow-2xl">
+              <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200 dark:border-white/5">
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="h-2 w-32 bg-gray-200 dark:bg-white/10 rounded-full"></div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 dark:bg-black/40 rounded-xl p-5 border border-gray-200 dark:border-white/5">
+                  <div class="flex justify-between items-start mb-4">
+                    <div>
+                      <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Solde Total</p>
+                      <h3 class="text-2xl font-bold dark:text-white">
+                        $96,321 <span class="text-sm font-normal text-gray-500 dark:text-gray-400">(0.84 BTC)</span>
+                      </h3>
+                    </div>
+                    <div class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-500 font-medium">+14.80%</div>
+                  </div>
+                  <div class="flex gap-2 mt-4">
+                    <div class="h-8 w-8 rounded-full bg-gray-200 dark:bg-white/10 flex items-center justify-center text-xs">₿</div>
+                    <div class="h-8 w-8 rounded-full bg-gray-200 dark:bg-white/10 flex items-center justify-center text-xs">Ξ</div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-black/40 rounded-xl p-5 border border-gray-200 dark:border-white/5 relative">
+                  <div class="space-y-3">
+                    <div class="flex justify-between items-center bg-white dark:bg-white/5 p-3 rounded-lg">
+                      <div>
+                        <p class="text-xs text-gray-500">Payer</p>
+                        <p class="font-bold dark:text-white">0.0013</p>
+                      </div>
+                      <div class="flex items-center gap-1 bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs dark:text-white">
+                        <span>BTC</span> <i class="w-3 h-3" data-lucide="chevron-down"></i>
+                      </div>
+                    </div>
+                    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                      <div class="w-8 h-8 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center border-4 border-white dark:border-[#15152a] text-white">
+                        <i class="w-4 h-4" data-lucide="arrow-down-up"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center bg-white dark:bg-white/5 p-3 rounded-lg">
+                      <div>
+                        <p class="text-xs text-gray-500">Recevoir</p>
+                        <p class="font-bold dark:text-white">48.30</p>
+                      </div>
+                      <div class="flex items-center gap-1 bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs dark:text-white">
+                        <span>XRP</span> <i class="w-3 h-3" data-lucide="chevron-down"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-primary to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <div class="absolute -bottom-5 -left-5 w-32 h-32 bg-gradient-to-tr from-secondary to-pink-600 rounded-full blur-3xl opacity-30"></div>
+          </div>
+        </div>
+      </section>
+      <section class="py-12 border-y border-gray-200 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-white/10">
+            <div class="p-4">
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">Communauté Globale</p>
+              <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">+1.5M</h2>
+              <p class="text-xs text-gray-400 mt-2">Portefeuilles Connectés</p>
+            </div>
+            <div class="p-4">
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">Croissance des transactions</p>
+              <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400">$2B+</h2>
+              <p class="text-xs text-gray-400 mt-2">Sécurisé, transparent et imparable</p>
+            </div>
+            <div class="p-4">
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">Fiabilité de la plateforme</p>
+              <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-secondary">200K+</h2>
+              <p class="text-xs text-gray-400 mt-2">Intégrations DApp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Façonner le <span class="text-primary">Futur</span> de <br />
+              l'Innovation Numérique
+            </h2>
+            <div class="mt-4 flex flex-col md:flex-row justify-between items-end gap-4">
+              <p class="text-gray-600 dark:text-gray-400 max-w-xl">
+                Découvrez une suite d'outils puissants conçus pour vous donner un avantage dans l'écosystème décentralisé.
+              </p>
+              <p class="text-xs text-gray-500 dark:text-gray-500 text-right">
+                Au-delà des transactions,<br />Vers une véritable propriété
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="group relative bg-white dark:bg-card-dark rounded-2xl p-1 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors duration-300">
+              <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative h-full bg-gray-50 dark:bg-[#0c0c1d] rounded-xl p-6 overflow-hidden flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sécurité par conception</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Protégez vos actifs avec un cryptage de haut niveau et une surveillance constante.</p>
+                </div>
+                <div class="mt-8 relative h-32 w-full flex items-center justify-center">
+                  <div class="absolute inset-0 bg-gradient-to-t from-gray-50 dark:from-[#0c0c1d] to-transparent z-10"></div>
+                  <div class="w-16 h-16 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-xl shadow-[0_0_30px_rgba(236,72,153,0.4)] flex items-center justify-center">
+                    <span class="material-icons-outlined text-white text-3xl">shield</span>
+                  </div>
+                  <div class="absolute bottom-0 w-full px-4 space-y-2 opacity-30">
+                    <div class="h-1 w-full bg-gray-400 dark:bg-white/20 rounded"></div>
+                    <div class="h-1 w-2/3 bg-gray-400 dark:bg-white/20 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-white dark:bg-card-dark rounded-2xl p-1 border border-primary/30 dark:border-primary/40 shadow-xl shadow-primary/5">
+              <div class="relative h-full bg-gray-50 dark:bg-[#0c0c1d] rounded-xl p-6 overflow-hidden flex flex-col">
+                <div class="flex-grow flex items-center justify-center relative my-8">
+                  <div class="absolute w-48 h-48 border border-gray-300 dark:border-white/10 rounded-full animate-[spin_10s_linear_infinite]">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-yellow-400 rounded-full shadow-[0_0_10px_orange]"></div>
+                  </div>
+                  <div class="absolute w-32 h-32 border border-gray-300 dark:border-white/10 rounded-full animate-[spin_7s_linear_infinite_reverse]">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_blue]"></div>
+                  </div>
+                  <div class="relative z-10 w-12 h-12 bg-white dark:bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+                    <span class="material-icons-outlined text-primary text-2xl">hub</span>
+                  </div>
+                </div>
+                <div class="text-center relative z-10">
+                  <div class="inline-flex items-center justify-center p-2 mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Puissance Multi-Chaînes</h3>
+                  </div>
+                  <div class="mt-4">
+                    <a class="inline-flex items-center justify-center w-full py-3 px-4 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all" href="#">
+                      Commencer
+                      <span class="material-icons-outlined ml-2 text-sm">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group relative bg-white dark:bg-card-dark rounded-2xl p-1 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors duration-300">
+              <div class="absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative h-full bg-gray-50 dark:bg-[#0c0c1d] rounded-xl p-6 overflow-hidden flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Instantané et Évolutif</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Transactions ultra-rapides et infrastructure évolutive conçue pour vous.</p>
+                </div>
+                <div class="mt-8 relative h-32 w-full flex items-center justify-center">
+                  <div class="w-16 h-16 bg-gradient-to-bl from-orange-400 to-pink-500 rounded-xl shadow-[0_0_30px_rgba(251,146,60,0.4)] flex items-center justify-center z-10">
+                    <span class="material-icons-outlined text-white text-3xl">bolt</span>
+                  </div>
+                  <div
+                    class="absolute inset-0"
+                    style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px;"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-gray-50 dark:bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="w-full md:w-1/2 relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 blur-[100px] opacity-20 pointer-events-none"></div>
+              <div class="relative bg-white dark:bg-card-dark/50 border border-gray-200 dark:border-white/10 rounded-3xl p-6 backdrop-blur-xl">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-secondary to-pink-500 rounded-full px-6 py-2 shadow-lg z-20">
+                  <span class="text-white font-medium flex items-center gap-2">
+                    <span class="material-icons-outlined text-sm">grid_view</span> Bibliothèque NFT
+                  </span>
+                </div>
+                <div class="flex justify-center items-end gap-4 mt-8 h-80 overflow-hidden relative">
+                  <div class="w-32 h-48 bg-gray-200 dark:bg-gray-800 rounded-xl transform -rotate-6 translate-y-4 border-2 border-white dark:border-gray-700 overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+                    <img
+                      alt="NFT Art abstrait"
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2kgoGkJ2KaJo9sNsoJkSC0fqOCfVb7fi4LWOtapKYCiT2VWI3K9tvg5DarZLxEx2PpEcMDuafk6nSWkxQPdU0ffDmmkJovAyWbK5e6YDa84ees43T52vmcbbLH7BOsmzCFH_ktkbJHpR_4iLKLsLsi1UAV0qQGCSnDj5YZGMNesMM7BvMfvPwQNPcylnhyf-bN5M6yCiz7-kuLVSPeiQ18_eRru9XhXjyeNdNkToLKVt1Nm5KP-2P4OABcIWXp0f6Po_4pedoFv14"
+                    />
+                    <div class="absolute bottom-0 w-full bg-black/60 p-2 text-[10px] text-white backdrop-blur-sm">Art #01</div>
+                  </div>
+                  <div class="w-48 h-64 bg-gray-200 dark:bg-gray-800 rounded-2xl z-10 border-4 border-white dark:border-gray-700 overflow-hidden shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                    <img
+                      alt="Chat NFT principal"
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHgeg4P6jF49LB3EFB7pCpC956H7bGqOqkxOHyhySVjyo9IwZMY_P0sOle6qdJzBa6qGFGBxf2oA1Aj-k2FZBqa9Ly3n2XemSlaSPds2IF04JIlxNlkARyGdsY_v6GZNw4RkD07FuSTB5JP4PbuYFoGq6TfFNS6oC8XJLle5pgMzuY840u6BOgBF_MaF8AowFs92ahD1f4GPhVpePLut-eJc70V9vOVgqiXSO8FWtSQFgFqHIxA1zagbJF0Q9M17F9mNLf5PpoqWqU"
+                    />
+                    <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4 text-white">
+                      <p class="font-bold">Cool Cat #882</p>
+                      <p class="text-xs text-gray-300">Collection Rare</p>
+                    </div>
+                  </div>
+                  <div class="w-32 h-48 bg-gray-200 dark:bg-gray-800 rounded-xl transform rotate-6 translate-y-4 border-2 border-white dark:border-gray-700 overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+                    <img
+                      alt="NFT singe"
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGHf4CCviPKJpGQ9tZaSOMukZXTHHl36FU6FLWddnKOkutLC9sWkTLZ4Yew6BAqei4qq5_7zjn7MeRcOEIEit6AMH6rY3LXzxSXzeOSfBvkGXEl5VyceLyiG4e0Fp-VuCVMVkmnbyPITliCXtWO7ni4qp7UBDBz_EmjOHIpj1GmhmsCRurCdLrdyDTJLVm3cbjk7bbSf6Z91LYrsbGExuiUwOsi2PAi4uEg0S2Woup4Y-DUy9PM2SiYC7x8s9CpQmD3N7_szHtbotW"
+                    />
+                    <div class="absolute bottom-0 w-full bg-black/60 p-2 text-[10px] text-white backdrop-blur-sm">Ape #22</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Présentez Votre <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-purple-400">Collection NFT</span>
+              </h2>
+              <p class="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                Affichez vos NFT préférés et laissez votre identité numérique briller à travers l'espace Web3. Gérez,
+                échangez et exposez vos actifs en toute simplicité.
+              </p>
+              <a
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-secondary transition-colors shadow-lg shadow-primary/30"
+                href="#"
+              >
+                Accéder à la plateforme
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 relative overflow-hidden">
+        <div class="absolute right-0 top-1/4 w-1/2 h-1/2 bg-gradient-to-l from-blue-600/10 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Explorez &amp; Connectez <br />
+                aux <span class="text-secondary">DApps</span>
+              </h2>
+              <p class="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                Liez en toute transparence votre portefeuille aux applications que vous aimez : DeFi, places de marché, et tout le reste. Un écosystème ouvert à portée de main.
+              </p>
+              <button class="px-6 py-3 rounded-full bg-[#7c3aed] text-white font-medium hover:bg-[#6d28d9] transition-colors shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                Accéder à la plateforme
+              </button>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+              <div class="relative w-full max-w-sm bg-[#0c0c1d] border border-white/10 rounded-3xl p-6 shadow-2xl">
+                <div class="flex justify-between items-center mb-6">
+                  <span class="text-white font-medium">Connexions</span>
+                  <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs font-bold">U</div>
+                      <span class="text-gray-300 group-hover:text-white">Uniswap</span>
+                    </div>
+                    <div class="w-8 h-4 bg-gray-700 rounded-full relative">
+                      <div class="absolute left-1 top-1 w-2 h-2 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-black border border-white/20 flex items-center justify-center text-white text-xs font-bold">O</div>
+                      <span class="text-gray-300 group-hover:text-white">OKX</span>
+                    </div>
+                    <div class="w-8 h-4 bg-gray-700 rounded-full relative">
+                      <div class="absolute left-1 top-1 w-2 h-2 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-75"></div>
+                    <div class="relative flex items-center justify-between p-3 rounded-xl bg-[#1e1e38] border border-primary/50 cursor-pointer">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#8247e5] flex items-center justify-center text-white">
+                          <i class="w-5 h-5" data-lucide="hexagon"></i>
+                        </div>
+                        <span class="text-white font-bold">Polygon</span>
+                      </div>
+                      <div class="w-10 h-5 bg-primary rounded-full relative">
+                        <div class="absolute right-1 top-1 w-3 h-3 bg-white rounded-full shadow-sm"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-900 to-black border border-white/20 flex items-center justify-center text-white text-xs font-bold">S</div>
+                      <span class="text-gray-300 group-hover:text-white">Solana</span>
+                    </div>
+                    <div class="w-8 h-4 bg-gray-700 rounded-full relative">
+                      <div class="absolute left-1 top-1 w-2 h-2 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">C</div>
+                      <span class="text-gray-300 group-hover:text-white">Chainlink</span>
+                    </div>
+                    <div class="w-8 h-4 bg-gray-700 rounded-full relative">
+                      <div class="absolute left-1 top-1 w-2 h-2 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-gray-50 dark:bg-black/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <p class="text-xl text-gray-500 dark:text-gray-400 font-light mb-2">Construit pour les gens,</p>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+              Propulsé par la <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-500">Communauté Web3</span>
+            </h2>
+            <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">Rejoignez des milliers de personnes qui façonnent la révolution décentralisée.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white dark:bg-[#13132b] p-6 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-primary/30 transition-all group">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+                "Explorer les DApps ici ressemble à déverrouiller des mondes cachés. C'est fluide, rapide et étonnamment amusant."
+              </p>
+              <div class="flex items-center justify-between mt-auto">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-gray-700"></div>
+                  <div>
+                    <p class="text-xs font-bold dark:text-white">GitChain Studios</p>
+                  </div>
+                </div>
+                <div class="text-xs text-green-400 flex items-center">
+                  <span class="material-icons-outlined text-[14px] mr-1">bolt</span> 4.9
+                </div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-[#13132b] p-6 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-primary/30 transition-all group">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+                "Enfin, une plateforme Web3 qui met la sécurité au premier plan. Je peux transiger l'esprit tranquille, sachant que mes actifs sont toujours protégés."
+              </p>
+              <div class="flex items-center justify-between mt-auto">
+                <div class="flex items-center gap-3">
+                  <div>
+                    <p class="text-xs font-bold dark:text-white">Elena R.</p>
+                    <p class="text-[10px] text-gray-500">Développeur Blockchain</p>
+                  </div>
+                </div>
+                <div class="text-xs text-pink-400 flex items-center">
+                  <span class="material-icons-outlined text-[14px] mr-1">favorite</span> 4.9
+                </div>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#1e1e38] to-[#13132b] p-6 rounded-2xl border border-white/10 relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-24 h-24 bg-primary/20 blur-2xl rounded-full"></div>
+              <h3 class="text-3xl font-bold text-white mb-1">120K+</h3>
+              <p class="text-xs text-gray-400 mb-8">transactions validées quotidiennement avec zéro temps d'arrêt.</p>
+              <div class="flex items-center gap-2 text-xs text-gray-300 border-t border-white/10 pt-4">
+                <span class="font-bold text-white">XT</span> Notre Communauté
+              </div>
+            </div>
+            <div class="bg-white dark:bg-[#13132b] p-6 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-primary/30 transition-all group">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+                "Gérer mes NFTs était un chaos. Maintenant, je peux exposer, échanger et connecter des portefeuilles en un seul endroit - c'est sans effort."
+              </p>
+              <div class="flex items-center justify-between mt-auto">
+                <div class="flex items-center gap-3">
+                  <div>
+                    <p class="text-xs font-bold dark:text-white">Sofia M.</p>
+                    <p class="text-[10px] text-gray-500">Créatrice NFT</p>
+                  </div>
+                </div>
+                <div class="text-xs text-purple-400 flex items-center">
+                  <span class="material-icons-outlined text-[14px] mr-1">star</span> 4.9
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white dark:bg-[#13132b] p-6 rounded-2xl border border-gray-100 dark:border-white/5">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                "La transparence en temps réel aide à suivre chaque détail. Fini les angles morts dans l'activité blockchain."
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="text-xs text-gray-500">
+                  <span class="block font-bold dark:text-white">Daniel R.</span>
+                  Analyste DeFi
+                </div>
+                <div class="text-xs text-white bg-gray-700 px-2 py-1 rounded">4.9</div>
+              </div>
+            </div>
+            <div class="col-span-1 md:col-span-2 bg-gradient-to-r from-[#1a1a33] to-[#252542] p-6 rounded-2xl border border-white/10 flex flex-col justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+              <h3 class="text-3xl font-bold text-white mb-2 relative z-10">2.3M+</h3>
+              <p class="text-sm text-gray-400 relative z-10">utilisateurs construisent déjà le futur avec nous.</p>
+              <div class="mt-4 flex items-center gap-2 text-xs text-purple-300 relative z-10">
+                <span class="material-icons-outlined text-sm">trending_up</span> Croissance plus forte chaque jour
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(168,85,247,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.1)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-primary/30 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="relative max-w-4xl mx-auto px-4 text-center z-10">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Prêt à Construire <br />
+            Votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Univers Web3</span> ?
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-10 text-lg">Rejoignez le futur décentralisé dès aujourd'hui.</p>
+          <a class="inline-flex items-center px-8 py-4 text-base font-bold rounded-full text-white bg-white hover:bg-gray-100 dark:bg-white dark:text-primary dark:hover:bg-gray-200 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105" href="#">
+            Accéder à la plateforme
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-100 dark:bg-[#050511] border-t border-gray-200 dark:border-white/10 pt-16 pb-8 relative overflow-hidden">
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-primary/10 blur-[100px]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Construisez votre monde Web3</h3>
+          <p class="text-2xl font-light dark:text-white">
+            avec <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-primary font-normal">Aisance</span>
+          </p>
+          <p class="mt-4 text-xs text-gray-500 max-w-md mx-auto">
+            Construisez votre monde Web3 facilement. Sécurisé, transparent et imparable pour l'avenir décentralisé.
+          </p>
+        </div>
+        <div class="max-w-md mx-auto mb-16">
+          <div class="flex items-center bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-full p-1 pl-4">
+            <input
+              class="bg-transparent border-none text-sm w-full text-gray-900 dark:text-white placeholder-gray-500 focus:ring-0"
+              placeholder="Recevoir les mises à jour produits"
+              type="email"
+            />
+            <button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
+              <i class="w-4 h-4" data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 dark:border-white/5 text-xs text-gray-500">
+          <div class="flex gap-4 mb-4 md:mb-0">
+            <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+              <span class="font-bold">X</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+              <i class="w-4 h-4" data-lucide="linkedin"></i>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+              <i class="w-4 h-4" data-lucide="facebook"></i>
+            </a>
+          </div>
+          <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-4 md:mb-0">
+            <a class="hover:text-white transition-colors" href="#">À propos</a>
+            <a class="hover:text-white transition-colors" href="#">Marché</a>
+            <a class="hover:text-white transition-colors" href="#">Intégration</a>
+            <a class="hover:text-white transition-colors" href="#">Tarifs</a>
+            <a class="hover:text-white transition-colors" href="#">Blogs</a>
+          </div>
+          <div class="flex gap-4">
+            <a class="hover:text-white transition-colors" href="#">Politique de Confidentialité</a>
+            <span>•</span>
+            <a class="hover:text-white transition-colors" href="#">Conditions d'Utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

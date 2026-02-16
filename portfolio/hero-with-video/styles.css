@@ -1,0 +1,51 @@
+:root {
+  --bg: #0a0e1c;
+  --bg-alt: #10162c;
+  --text: #eef2ff;
+  --muted: rgba(238, 242, 255, 0.7);
+  --accent: #6a5cff;
+  --accent-2: #4dd4ff;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 40px 70px rgba(7, 9, 22, 0.55);
+}
+
+body {
+  background: radial-gradient(900px 600px at 85% 10%, rgba(77, 212, 255, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 15% 20%, rgba(106, 92, 255, 0.18), transparent 60%),
+    var(--bg);
+}
+
+.video-frame {
+  position: relative;
+  border-radius: 24px;
+  padding: 56% 0 0 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.video-frame::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+}
+
+.play-button {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

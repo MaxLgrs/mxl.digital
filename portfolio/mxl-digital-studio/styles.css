@@ -1,0 +1,81 @@
+:root {
+  --bg: #0b1020;
+  --bg-alt: #101a36;
+  --text: #eef3ff;
+  --muted: rgba(238, 243, 255, 0.72);
+  --accent: #35d0ff;
+  --accent-2: #9f6eff;
+  --card: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.16);
+  --shadow: 0 40px 70px rgba(8, 10, 24, 0.55);
+}
+
+body {
+  background: radial-gradient(900px 600px at 80% 10%, rgba(53, 208, 255, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 10% 20%, rgba(159, 110, 255, 0.15), transparent 60%),
+    var(--bg);
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(140deg, rgba(53, 208, 255, 0.08), rgba(159, 110, 255, 0.08));
+  z-index: -1;
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.studio-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.studio-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.showcase-tile {
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+.showcase-tile span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.divider {
+  margin: 18px 0 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .studio-grid,
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+}

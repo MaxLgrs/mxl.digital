@@ -1,0 +1,11 @@
+{
+  "name": "mxl-digital-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=8088 --host=127.0.0.1 --watch=index.html,styles.css,script.js,audit-automatisation-gratuit,outil-de-calcul-de-rentabilite-avec-automatisation-et-ia,portfolio --ignore=node_modules"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

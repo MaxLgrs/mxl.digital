@@ -1,0 +1,57 @@
+:root {
+  --bg: #f7f1ee;
+  --bg-alt: #fff7f4;
+  --text: #3a2f2c;
+  --muted: rgba(58, 47, 44, 0.7);
+  --accent: #e88b79;
+  --accent-2: #8ad6c4;
+  --card: #fffaf8;
+  --border: rgba(58, 47, 44, 0.12);
+  --shadow: 0 18px 40px rgba(58, 47, 44, 0.12);
+}
+
+body {
+  background: radial-gradient(600px 500px at 85% 10%, rgba(232, 139, 121, 0.2), transparent 60%),
+    radial-gradient(600px 500px at 10% 20%, rgba(138, 214, 196, 0.2), transparent 60%),
+    var(--bg);
+}
+
+header {
+  background: rgba(255, 247, 244, 0.9);
+  border-bottom: 1px solid rgba(58, 47, 44, 0.1);
+}
+
+.nav-links {
+  color: var(--muted);
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--text);
+}
+
+.hero-visual {
+  display: grid;
+  gap: 16px;
+}
+
+.soft-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.schedule {
+  display: grid;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.schedule div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(58, 47, 44, 0.2);
+  padding-bottom: 8px;
+}

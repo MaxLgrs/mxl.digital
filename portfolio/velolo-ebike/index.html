@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Velolo E-Bike - Aidons le monde à respirer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a1a1a",
+              "background-light": "#FDFBF7",
+              "background-dark": "#121212",
+              "surface-light": "#F5F2EB",
+              "surface-dark": "#1E1E1E",
+              "text-light": "#1a1a1a",
+              "text-dark": "#e5e5e5",
+              "muted-light": "#666666",
+              "muted-dark": "#a3a3a3",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans antialiased selection:bg-primary selection:text-white">
+    <nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300" id="navbar">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent pointer-events-none h-24"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 relative z-10">
+          <div class="flex items-center gap-2">
+            <span class="material-icons text-white">pedal_bike</span>
+            <span class="text-white font-bold text-xl tracking-tight">Velolo</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium text-white/90">
+              <a class="hover:text-white transition-colors" href="#">Notre Mission</a>
+              <a class="hover:text-white transition-colors" href="#">Pourquoi le Vélo</a>
+              <a class="hover:text-white transition-colors" href="#">Modèles</a>
+              <a class="hover:text-white transition-colors" href="#">Comment Obtenir</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="text-white p-1 rounded-full hover:bg-white/20 transition">
+              <span class="material-icons text-sm">shopping_bag</span>
+            </button>
+            <a class="bg-white text-primary px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition shadow-lg" href="#">
+              Démarrer
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="relative h-[90vh] min-h-[600px] flex flex-col justify-end pb-12 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Cycliste sur un vélo électrique en montagne"
+          class="w-full h-full object-cover object-center"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKAi-M0mNL4R5HpKvR39kM7Okgg6r7wlFJf5R_tyqqHi5qQZC_aY-K9liV9FC_CR_-CPGXnzFXAVw0NJ5eshazJINagiuA9KCb021TByDHEtEAy153SYyMoifgEC8fkuVHbOCXodDL7btZv7YpURdxCIli57yVUNtJ0iPxSX317lqdjnD5sI0A83dZVem88X9OidYKyH8UlZQdY3CcsA1xqRGzfL3nMbnWf04sveyUduAcFHIciK_lhpuXHwIxXFM4kcLxvFzcN2s"
+        />
+        <div class="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-2xl mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Aidons le Monde<br />
+            À Respirer à Nouveau
+          </h1>
+          <p class="text-gray-200 text-sm md:text-base mb-8 max-w-md">
+            Chaque trajet fait la différence. Rejoignez la révolution électrique et réduisez votre empreinte carbone dès
+            aujourd'hui.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-white text-primary px-6 py-3 rounded text-sm font-bold uppercase hover:bg-gray-100 transition shadow-lg">
+              Voir les modèles
+            </button>
+            <button class="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded text-sm font-bold uppercase hover:bg-white/30 transition">
+              En savoir plus
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 border-t border-white/20 pt-8">
+          <div>
+            <div class="text-2xl md:text-4xl font-bold text-white">2.6 Kg</div>
+            <div class="text-[10px] md:text-xs text-gray-300 uppercase tracking-wide mt-1">CO₂ Économisé / Jour</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-4xl font-bold text-white">950 Kg</div>
+            <div class="text-[10px] md:text-xs text-gray-300 uppercase tracking-wide mt-1">Émissions évitées / An</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-4xl font-bold text-white">450 G</div>
+            <div class="text-[10px] md:text-xs text-gray-300 uppercase tracking-wide mt-1">Carbone sauvé / km</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-16 max-w-3xl">
+        <span class="text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-4 block">Notre Mission</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white leading-tight">
+          Nous ne vendons pas juste des vélos électriques, nous créons un mouvement pour transformer la façon dont le
+          monde voyage, respire et prospère.
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-light dark:bg-surface-dark">
+            <img
+              alt="Cycliste urbain avec sac à dos jaune"
+              class="w-full h-full object-cover hover:scale-105 transition duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2eKaT5bza-26NRMzUmS3QWoBI5PHfRAb7U5amTFnonWsDmsP9gflEjKVifGKjSebwkPEJR4FYpKaXjpCng_4EOBkKVDhnesqsLiOXazKKem7DTBR3JYzRc_rq1rJwOuMA124_UFxJQCYSP86moTu2RpdOxJ_d5FOYfL9dY5HPB2hnzz5qKIHquEUePYJuL9FEh-0HQfzIffVY0l_TaO4EeraYM-n9FgyjybErWi8S2T_duViHUWN1bujN-oL56lx9ItvX4iIbos"
+            />
+          </div>
+          <p class="text-sm text-muted-light dark:text-gray-400 leading-relaxed">
+            Nous croyons que les vélos électriques ne sont pas seulement des véhicules, ce sont des déclarations. Un
+            engagement envers l'aventure sans compromis, explorant sentiers et villes sans rien laisser derrière, sauf
+            des traces de pneus.
+          </p>
+        </div>
+        <div class="md:pt-20">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-light dark:bg-surface-dark shadow-xl">
+            <img
+              alt="Cycliste roulant sur une route de campagne"
+              class="w-full h-full object-cover hover:scale-105 transition duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI9lNn11RhiFESNclI-1jpac1peiET4kAX1sGRUyMnmfiZqz37WFadp7f9oNHNhfL_mnaqK3RHsd6g1xqCz_Gb8g0YVnzCcrC4Dwgd5d3lFbz01IXcakh9vQNYt0RFTNhyGqVHOX1JdmRCV8YkTqQH_mDS580cP0-MGi8t0L8LtoZJl3rbEx7rchDgn1WhmmiNqYnTv_x3T3tvhVNsILh2cVRNar_LCUgs0uMmTYleiyipLUC6KUJDo4A7STGofZbXCe3t7pSwOA8"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Cycliste en forêt flou de mouvement"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKBDE7g2OrS2ZAevNaI-ZZ1O50Gvb2OGTMEthKKcoZjPGVOpCBMTADeKUx-UN1hsc3a4l4r_blWkkPkhf-4ExQKp_x4GEMJ4xIkadzCbfIet58qE64hhVCnUvYQQE1EL0y0GXwgfu9mUW4vFSGTxVGIamEAZwk7k15wFvOHl6dlNNXWfaIaeb-0jt_9RyqHRhr5GA70uihJ0EcqwWw-c-qOa1KgnJYoxj6oWAEeDz8CTmPx6K03LEEe5T6b71Orbb--fieY0a16cU"
+        />
+        <div class="absolute inset-0 bg-black/60 dark:bg-black/70"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="max-w-xl text-white">
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-300 mb-4 block">Pourquoi pédaler ?</span>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Votre trajet quotidien ne devrait pas coûter une fortune à la planète.
+          </h2>
+          <p class="text-gray-300 text-lg">
+            Chez Velolo, nous rendons le choix électrique plus facile, plus rapide et plus excitant. Parce que la
+            planète n'a pas besoin de parfaits militants, mais de millions de personnes ayant un impact réel.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 relative hidden md:block"></div>
+      </div>
+    </section>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-background-light dark:bg-background-dark">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-lg">
+          <span class="text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-4 block">
+            Les pièces de nos vélos
+          </span>
+          <h2 class="text-3xl font-bold text-primary dark:text-white">Conçu pour durer,<br />Ingénierie de performance</h2>
+        </div>
+        <p class="text-sm text-muted-light dark:text-gray-400 max-w-xs text-right md:text-left">
+          Chaque vélo Velolo est assemblé avec des composants premium provenant des fabricants les plus fiables au monde.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group">
+          <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-surface-light dark:bg-surface-dark relative">
+            <img
+              alt="Moteur de vélo électrique"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXU7RiSu70R0b937sUCIdjwX6KHA6xVblPBSgXq2AViCtmVfTP_b7rRrxcceodF772EuRcv_wdDlaqs9dE2eTWdHZjwKlSn0bqiVxJt2A1F_ydy3ORW5HSMJPKNdi7KsgQApuprUhwRTsNuHO3WMUIyBizo2ogsDbzutU6dg1uhhzPPBsm42jZdbsfGRFgMblNYd4pwB23CBXlhnJkyHwX0-zEcF3TXhZei-VQt0P7y15XjUcN2kEDKuvrPyeNGbniVqshHeL5ww"
+            />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition"></div>
+          </div>
+          <h3 class="text-lg font-bold text-primary dark:text-white mb-2">Moteurs garantis 6 ans</h3>
+          <p class="text-sm text-muted-light dark:text-muted-dark">
+            Nos moteurs premium sont conçus pour plus de 50 000 km de performance fiable.
+          </p>
+        </div>
+        <div class="group">
+          <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-surface-light dark:bg-surface-dark relative">
+            <img
+              alt="Freins à disque vélo"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuALlZeXcUaKjj6Eg2fQ48rS9LY7f4DWR_v1FQwe1Od2v6rX2AFu8qe-BUXgJnFfxhu3PyYQzGWaGtWpXfkYIj-l5tCnGSUu07uKFwrzddlEg9ocvYnMaACeq3Y0IYYBmB1o1cRrAambzCv1y0BmynwxnFmmgTPumwDNllxnxanBVF4YPExTFIEy70KFF5yzbPgRfZGYx-ReIfXk7RcAS16gYZthql3AW3hvxWZkfiUh6vKG1kQoOD9t8iTQpOV0KUzFRoN_0Kx-2ag"
+            />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition"></div>
+          </div>
+          <h3 class="text-lg font-bold text-primary dark:text-white mb-2">Freins à disque en acier</h3>
+          <p class="text-sm text-muted-light dark:text-muted-dark">
+            Construction en acier haute résistance pour une puissance de freinage constante.
+          </p>
+        </div>
+        <div class="group">
+          <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-surface-light dark:bg-surface-dark relative">
+            <img
+              alt="Dérailleur Shimano"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWyVOZdG8osvEgCbIq2eBTMpRPOkDb2IlYNdP6yONQlJc-IH6YUqLn-NuXO9gSn_HpuxBcLVTJIGVpVnz7MvMoSsJyEinF3myzDpLl-sEYqQ93KdjBmru4s_EI0DAfe6ciHl2h8_vdDRqYSfLGSBeZGZ0HDih2lzH7UFLuFQgse2Jg_QlsrQ2cCSc0tbrMe9mZvXjNoS-5IuznTvPvFV2GuyrwqYPvW1DInJbakzvCek4nomHP1Xbk4v8EGLSNFWopFFP7fsq7W9c"
+            />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition"></div>
+          </div>
+          <h3 class="text-lg font-bold text-primary dark:text-white mb-2">Dérailleur arrière Shimano</h3>
+          <p class="text-sm text-muted-light dark:text-muted-dark">
+            Passage de vitesses fluide, maintenance nulle, fiabilité qui a fait de Shimano la référence mondiale.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 bg-surface-light dark:bg-surface-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <div class="w-full lg:w-1/2 relative">
+            <div class="aspect-[3/4] md:aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
+              <img
+              alt="Vélo électrique Velolo Capolist en ville"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmKqUlYNJWOLjuhyjLG6zB0MrE2vb4ZObRvP2vMFOpYmoGfBl3JxvRfLMXRU21pLPznOtv8Eqj2eZpBsZfP7ocYc4iKRVVNcbZtgr4hY2Q2whwlkWwoXd5YVDNorzNFQfWj5KcHVCweyzHDBlvMdWvyg4JhCmW2VrjTCzc1LTkVH1ZGMOIsyH4rItNZQD-NN-RzqyZ1-Mg6G9utSiuTPhYpWGv7ONBSpH0ttIQG8nOw9DqoZY0KyoJxr7dcjtYgVQVCjRtZZQ2jEA"
+              />
+              <div class="absolute bottom-8 left-8 flex gap-2">
+                <span class="bg-black text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full shadow-lg">Noir Nuit</span>
+                <span class="bg-white/80 backdrop-blur text-black text-[10px] uppercase font-bold px-3 py-1 rounded-full shadow-lg">Gris Acier</span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 space-y-8">
+            <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2 block">Modèles Velolo</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-4">Velolo Capolist E-Bike</h2>
+              <p class="text-muted-light dark:text-gray-300 leading-relaxed">
+                Rencontrez votre nouveau chauffeur quotidien. Le Capolist est conçu pour les guerriers urbains qui refusent
+                les compromis—mêlant un design aérodynamique élégant à une assistance électrique puissante.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-neutral-700">
+              <h4 class="font-bold mb-4 text-primary dark:text-white">Spécifications du Vélo</h4>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between border-b border-gray-100 dark:border-neutral-700 pb-2">
+                  <span class="text-muted-light dark:text-gray-400">Jantes</span>
+                  <span class="font-medium text-primary dark:text-white text-right">S-Works 300C Hybrides</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 dark:border-neutral-700 pb-2">
+                  <span class="text-muted-light dark:text-gray-400">Pneus</span>
+                  <span class="font-medium text-primary dark:text-white text-right">Continental GT</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 dark:border-neutral-700 pb-2">
+                  <span class="text-muted-light dark:text-gray-400">Dérailleur Arrière</span>
+                  <span class="font-medium text-primary dark:text-white text-right">Shimano Tourney 7 Vitesses</span>
+                </div>
+                <div class="flex justify-between pb-2">
+                  <span class="text-muted-light dark:text-gray-400">Moteurs E-Bike</span>
+                  <span class="font-medium text-primary dark:text-white text-right">Cosmos 800 Watt</span>
+                </div>
+              </div>
+            </div>
+            <button class="w-full bg-primary text-white py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-black/80 transition shadow-lg">
+              Commander Maintenant
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div class="max-w-xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-4 block">Comment Obtenir</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white">
+            Recevoir votre Velolo est<br />Simple et Rapide
+          </h2>
+        </div>
+        <p class="text-sm text-muted-light dark:text-gray-400 max-w-xs text-left md:text-right">
+          Nous avons simplifié tout le processus pour que vous puissiez passer de la décision à la livraison en quelques
+          étapes. Rejoignez notre communauté de précommande et soyez parmi les premiers à rouler vers le futur.
+        </p>
+      </div>
+      <div class="bg-surface-light dark:bg-surface-dark rounded-3xl p-8 md:p-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2 space-y-12">
+            <div>
+              <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Précommande Lot 3</h3>
+              <p class="text-muted-light dark:text-gray-400 text-sm leading-relaxed mb-8">
+                Sécurisez votre Velolo dès aujourd'hui avec un prix préférentiel exclusif. Le lot 3 est en livraison
+                prioritaire, avec une couverture de garantie étendue et l'accès à notre communauté de fondateurs.
+              </p>
+              <button class="bg-primary text-white px-8 py-3 rounded text-sm font-bold uppercase hover:bg-gray-800 transition">
+                Commander
+              </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8 border-t border-gray-200 dark:border-neutral-700">
+              <div>
+                <h4 class="font-bold text-primary dark:text-white mb-2">Contacter le Marketing</h4>
+                <p class="text-xs text-muted-light dark:text-gray-400">
+                  Joignez notre équipe via WhatsApp, email ou chat en direct pour toute question.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white mb-2">Entrer sur Liste d'Attente</h4>
+                <p class="text-xs text-muted-light dark:text-gray-400">
+                  Confirmez votre commande avec un petit dépôt pour sécuriser votre place.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white mb-2">Livraison de votre Vélo</h4>
+                <p class="text-xs text-muted-light dark:text-gray-400">
+                  Votre Velolo arrive entièrement assemblé, testé et prêt à rouler.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+              <img
+                alt="Inspection de vélo en extérieur"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmGvPgzBruhcfNonQudfJPLwLRmfBYXe-XPbIcjuYldSORS5MCtrs1RDu7WUsXpJSOmdrsBEZSwh0x-6XdC65Qhox-X7-4hd_6OQ2ADsgNCNX-mWfebwZftJXO-sQ2uksyHMZWv8Jn81pxXJ6NH8dpOZn4hSI6EYBvRZ52wgJFhQKM_ZhJ-j_gL0qaoKGbrr2-F8DAfPEJbQ-GVo5b4IiU_6eroOUBY7h8cJOKv-TN62WVoTLvsRty9hS5kadsB4WUlvJ69bZzPB4"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100 dark:border-neutral-800">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-4 block">Experts Cyclistes</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white max-w-md">
+            Tout ce dont vous avez besoin pour rouler plus intelligemment.
+          </h2>
+        </div>
+        <button class="hidden md:block bg-primary text-white px-6 py-3 rounded text-xs font-bold uppercase hover:bg-gray-800 transition">
+          Voir toutes les actus
+        </button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="group cursor-pointer">
+          <div class="aspect-video rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-neutral-800">
+            <img
+              alt="Maintenance de vélo"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MpHZYLVvGcbpINOGbD3R3vwyr7b9PcfnR7VT47vFMQQwmxeD_FZi-PsxKM8jxFBGTv0tsbKiijBuScXJkRhmXO4IwxZLd7WJJHLTnOkFgBGzAGgfDivnhZmHumWf0CfF4Ra5Lu9mod7Bj4BnH-W66L23tXdv1yxD8kjHroO0vT1IgUyQCOr_QyTUSPWCoiQUUVqYNqiz2L142LgV082FKKtXaAxLgm_ydk4VZJyM-6jB0H3gbYr49JvMA_oGl90jkkKdL-uRZZo"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-2 group-hover:text-muted-light transition">
+            Entretenez Votre Vélo Sans Confusion
+          </h3>
+          <p class="text-sm text-muted-light dark:text-gray-400 leading-relaxed">
+            Votre vélo électrique n'a pas besoin de mécanicien pour chaque petit bruit. Découvrez les cinq tâches
+            d'entretien essentielles que tout cycliste devrait connaître...
+          </p>
+        </article>
+        <article class="group cursor-pointer">
+          <div class="aspect-video rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-neutral-800">
+            <img
+              alt="Groupe de cyclistes planifiant une route"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6TDbB8143EtygydlA5fwhgtInGTwFzA4xYAoApMU4E5eVAoWAIyKnjArGgLOlci0yE_dS6YtYo0ztBLMr6GHpJFKSDAqBX5aDNyE-Be7VozJOwSfpacgKRbKqK4pPOSOtpsPHAKhL0dm9xKiFzKnWb4J0lQ5mziYpsrvh74ABen1tKKHM5lXG5TjBdViSgUPWHcEnwI4YwuzB8OXhqF-YS7pOQzvp5CC8mUkzYf734MHE4Uv9AUvj5_UtPRlPRswgygKNbKBKyZ0"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-2 group-hover:text-muted-light transition">
+            Comment Démarrer et Planifier Votre Aventure
+          </h3>
+          <p class="text-sm text-muted-light dark:text-gray-400 leading-relaxed">
+            Les meilleures aventures commencent avec un plan (et une batterie pleine). Que vous vous attaquiez à des
+            sentiers de montagne ou à des pistes côtières, apprenez à cartographier...
+          </p>
+        </article>
+      </div>
+      <div class="mt-8 md:hidden text-center">
+        <button class="w-full bg-primary text-white px-6 py-3 rounded text-xs font-bold uppercase hover:bg-gray-800 transition">
+          Voir toutes les actus
+        </button>
+      </div>
+    </section>
+    <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Cycliste portant un casque"
+          class="w-full h-full object-cover object-top"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA25KXlf8Xtjvcljr2p5fcqPc8KTMlr9gT_OcY-kCQA_LItogNJcKTWdMFnePPDeF_JIAcDjOi20Es0PWuLbsWyx6WH21mhA0XHDxpa_1x69JOPnonKGL5R6Gp7v3T0TU8wC1KkV4xDbe8F1mE8qKkAWRuo684OiX1yuJFGOff3rtYdBxIzLTMi78XYs98YtIi4Mo7Qe7bNTMa8L-pvvGkWQHOySx4DLMtsRCa1XMgkaI3HQ9TxRSG1OhGf9u9gOcNOBRGzHoCL85c"
+        />
+        <div class="absolute inset-0 bg-black/50 dark:bg-black/60"></div>
+      </div>
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-gray-300 mb-4 block">Obtenez le Velolo E-Bike</span>
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+          Prêt à Conduire le Changement ?<br />
+          Votre Velolo Vous Attend
+        </h2>
+        <div class="flex justify-center gap-4">
+          <button class="bg-white text-primary px-8 py-3 rounded text-sm font-bold uppercase hover:bg-gray-100 transition shadow-xl">
+            Voir les modèles
+          </button>
+          <button class="bg-transparent border border-white text-white px-8 py-3 rounded text-sm font-bold uppercase hover:bg-white/10 transition">
+            En savoir plus
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-gray-100 dark:border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-6">
+              <span class="material-icons text-primary dark:text-white">pedal_bike</span>
+              <span class="text-primary dark:text-white font-bold text-xl tracking-tight">Velolo</span>
+            </div>
+            <p class="text-sm text-muted-light dark:text-gray-400 max-w-sm mb-6">
+              Permettre une mobilité durable grâce à l'innovation et à la performance en laquelle vous pouvez avoir confiance.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-primary dark:text-white mb-4 text-sm">Navigation</h4>
+            <ul class="space-y-3 text-xs text-muted-light dark:text-gray-400">
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Notre Mission</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Pourquoi Velolo</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Comment Obtenir</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Infos Cyclisme</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-primary dark:text-white mb-4 text-sm">Caractéristiques</h4>
+            <ul class="space-y-3 text-xs text-muted-light dark:text-gray-400">
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Shimano</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Continental GT</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Moteurs Cosmos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-primary dark:text-white mb-4 text-sm">À Propos</h4>
+            <ul class="space-y-3 text-xs text-muted-light dark:text-gray-400">
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Contact</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">À Propos de Nous</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Équipe</a></li>
+              <li><a class="hover:text-primary dark:hover:text-white transition" href="#">Carrières</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-[10px] text-muted-light dark:text-gray-500">Copyright 2025. Velolo, Tous droits réservés.</p>
+          <div class="flex items-center gap-6">
+            <div class="flex gap-4">
+              <a class="text-muted-light dark:text-gray-500 hover:text-primary dark:hover:text-white" href="#">
+                <span class="material-icons text-sm">photo_camera</span>
+              </a>
+              <a class="text-muted-light dark:text-gray-500 hover:text-primary dark:hover:text-white" href="#">
+                <span class="material-icons text-sm">smart_display</span>
+              </a>
+              <a class="text-muted-light dark:text-gray-500 hover:text-primary dark:hover:text-white" href="#">
+                <span class="material-icons text-sm">close</span>
+              </a>
+            </div>
+            <div class="flex gap-4 text-[10px] text-muted-light dark:text-gray-500">
+              <a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a>
+              <a class="hover:text-primary dark:hover:text-white" href="#">Conditions Générales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calcul de rentabilité IA — MXL.DIGITAL</title>
+    <meta
+      name="description"
+      content="Outil de calcul de rentabilité pour estimer les gains potentiels de l'automatisation et de l'IA."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <canvas id="starfall" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/">MXL.DIGITAL</a>
+        <nav class="nav-links">
+          <a href="/#services">Services</a>
+          <a href="/#processus">Processus</a>
+          <a href="/#portfolio">Portfolio</a>
+          <a href="/#roi">ROI</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="/audit-automatisation-gratuit/">Audit gratuit</a>
+          <a class="btn btn-primary" href="/#roi-form">Lancer le calcul</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="section page-hero">
+        <div class="container hero-grid">
+          <div class="hero-content" data-reveal>
+            <span class="badge">Outil ROI Automatisation</span>
+            <h1>Calculez votre rentabilité en 2 minutes.</h1>
+            <p>
+              Estimez vos gains mensuels, votre ROI et votre temps de retour sur investissement grâce à
+              l'automatisation et l'IA.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#roi-form">Commencer le calcul</a>
+              <a class="btn btn-secondary" href="/audit-automatisation-gratuit/">Réserver un audit</a>
+            </div>
+            <p class="note">Estimation indicative basée sur vos données.</p>
+          </div>
+          <div class="hero-visual" data-reveal>
+            <div class="glass-card">
+              <h3>Pourquoi ce calcul ?</h3>
+              <p>Priorisez les automatisations avec le meilleur impact financier.</p>
+              <div class="glass-stats">
+                <div>
+                  <strong>+35%</strong>
+                  <span>Productivité moyenne</span>
+                </div>
+                <div>
+                  <strong>2-4 sem.</strong>
+                  <span>Premiers résultats</span>
+                </div>
+                <div>
+                  <strong>3x</strong>
+                  <span>ROI attendu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container roi-tool-grid">
+          <form id="roi-form" class="audit-card" data-reveal>
+            <h2>Vos données</h2>
+            <label>
+              Heures gagnées par semaine
+              <input class="input" type="number" name="hours" min="0" value="10" />
+            </label>
+            <label>
+              Coût horaire moyen (€)
+              <input class="input" type="number" name="hourly" min="0" value="45" />
+            </label>
+            <label>
+              Leads supplémentaires / mois
+              <input class="input" type="number" name="leads" min="0" value="20" />
+            </label>
+            <label>
+              Taux de conversion (%)
+              <input class="input" type="number" name="conversion" min="0" max="100" value="12" />
+            </label>
+            <label>
+              Panier moyen (€)
+              <input class="input" type="number" name="deal" min="0" value="1500" />
+            </label>
+            <label>
+              Coût estimé de la solution / mois (€)
+              <input class="input" type="number" name="monthly" min="0" value="1200" />
+            </label>
+          </form>
+
+          <div class="audit-card" data-reveal>
+            <h2>Résultats estimés</h2>
+            <div class="result-card">
+              <strong data-output="monthly-savings">0 €</strong>
+              <span>Économies mensuelles de temps</span>
+            </div>
+            <div class="result-card">
+              <strong data-output="lead-revenue">0 €</strong>
+              <span>Revenus mensuels additionnels</span>
+            </div>
+            <div class="result-card">
+              <strong data-output="total-impact">0 €</strong>
+              <span>Impact total mensuel</span>
+            </div>
+            <div class="result-card">
+              <strong data-output="roi">0%</strong>
+              <span>ROI estimé</span>
+            </div>
+            <div class="result-card">
+              <strong data-output="payback">0 sem.</strong>
+              <span>Temps de retour sur investissement</span>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="/audit-automatisation-gratuit/">Obtenir un audit</a>
+              <a class="btn btn-secondary" href="/#contact">Parler à un expert</a>
+            </div>
+          </div>
+        </div>
+        <div class="container" data-reveal>
+          <p class="note">
+            Ces estimations sont indicatives. Les résultats varient selon votre secteur, vos outils et la qualité
+            des données.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="section-kicker">Aller plus loin</p>
+            <h2>Vous voulez un plan d'action précis ?</h2>
+            <p>Réservez un audit gratuit et obtenez un roadmap IA en 90 jours.</p>
+          </div>
+          <div class="conversion-grid">
+            <div class="contact-card" data-reveal>
+              <h3>Planifier un RDV</h3>
+              <form class="form-grid">
+                <label>
+                  Nom complet
+                  <input class="input" type="text" name="name" placeholder="Votre nom" required />
+                </label>
+                <label>
+                  Email
+                  <input class="input" type="email" name="email" placeholder="vous@email.com" required />
+                </label>
+                <label>
+                  Objectif principal
+                  <select class="select" name="goal">
+                    <option value="">Sélectionner</option>
+                    <option>Réduire les coûts</option>
+                    <option>Accélérer la croissance</option>
+                    <option>Structurer l'IA interne</option>
+                    <option>Améliorer l'expérience client</option>
+                  </select>
+                </label>
+                <label>
+                  Message
+                  <textarea class="textarea" name="message" placeholder="Parlez-nous de votre contexte"></textarea>
+                </label>
+                <button class="btn btn-primary" type="submit">Réserver mon RDV</button>
+              </form>
+            </div>
+            <div class="roi-panel" data-reveal>
+              <h3>Ce qui suit après le RDV</h3>
+              <ul>
+                <li>Analyse détaillée des processus</li>
+                <li>Scoring ROI par priorité</li>
+                <li>Architecture technique recommandée</li>
+                <li>Timeline de déploiement claire</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>MXL.DIGITAL</strong>
+          <div>Agence Web en Automatisation & IA</div>
+        </div>
+        <div class="footer-links">
+          <a href="/">Accueil</a>
+          <a href="/audit-automatisation-gratuit/">Audit gratuit</a>
+          <a href="/#contact">Prendre RDV</a>
+        </div>
+        <div>© 2026 MXL.DIGITAL. Tous droits réservés.</div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

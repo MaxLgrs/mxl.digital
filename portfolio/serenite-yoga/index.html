@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sérénité Yoga - Trouvez l'équilibre</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D8CDEA",
+              secondary: "#EADBC8",
+              accent: "#2A2A2A",
+              "background-light": "#FAFAFA",
+              "background-dark": "#121212",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1E1E1E",
+              "text-light": "#333333",
+              "text-dark": "#E5E5E5",
+              "muted-light": "#666666",
+              "muted-dark": "#A3A3A3",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .curved-text-path {
+        fill: transparent;
+      }
+      .curved-text {
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        fill: currentColor;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body transition-colors duration-300">
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+      <div class="flex items-center gap-2">
+        <div
+          class="w-8 h-8 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black font-bold font-display text-lg"
+        >
+          S
+        </div>
+        <span class="font-display font-semibold text-xl tracking-tight">SÉRÉNITÉ YOGA</span>
+      </div>
+      <div class="hidden md:flex gap-4">
+        <a
+          class="px-5 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-dark transition text-sm font-medium"
+          href="#"
+          >À propos</a
+        >
+        <a
+          class="px-5 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-dark transition text-sm font-medium"
+          href="#"
+          >Avis</a
+        >
+        <a
+          class="px-5 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-dark transition text-sm font-medium"
+          href="#"
+          >Instructeurs</a
+        >
+        <a
+          class="px-5 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-dark transition text-sm font-medium"
+          href="#"
+          >Cours</a
+        >
+      </div>
+      <button class="md:hidden text-text-light dark:text-text-dark" type="button">
+        <span class="material-icons">menu</span>
+      </button>
+    </nav>
+    <header class="relative px-4 md:px-8 max-w-7xl mx-auto mb-20">
+      <div
+        class="bg-primary/30 dark:bg-primary/10 rounded-[2.5rem] p-8 md:p-12 lg:p-16 min-h-[500px] lg:min-h-[600px] relative overflow-hidden flex flex-col justify-center"
+      >
+        <div class="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20 dark:opacity-10 hidden lg:block">
+          <svg class="w-full h-full" viewBox="0 0 1000 600">
+            <path class="curved-text-path" d="M 600 0 Q 750 300 1000 600" id="curve"></path>
+            <text class="curved-text text-black dark:text-white">
+              <textPath href="#curve" startOffset="0%">
+                Flexibilité • Clarté Mentale • Paix • Équilibre Émotionnel • Sérénité • Force
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="relative z-10 max-w-2xl">
+          <div
+            class="inline-block px-4 py-1.5 rounded-full border border-gray-400/30 bg-white/30 dark:bg-black/30 backdrop-blur-sm text-sm font-medium mb-6"
+          >
+            Équilibre Corps-Esprit-Âme
+          </div>
+          <h1 class="font-display text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-gray-900 dark:text-white">
+            Trouvez l'équilibre du corps et de l'esprit.
+          </h1>
+          <p class="text-lg md:text-xl text-muted-light dark:text-muted-dark max-w-lg mb-8 leading-relaxed">
+            Rejoignez notre communauté bienveillante pour explorer le yoga, la méditation et retrouver votre calme
+            intérieur. Commencez votre voyage dès aujourd'hui.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-black dark:bg-white text-white dark:text-black px-8 py-3.5 rounded-full font-medium hover:opacity-90 transition shadow-lg"
+              type="button"
+            >
+              Commencer
+            </button>
+            <button
+              class="bg-transparent border border-gray-400 dark:border-gray-600 px-8 py-3.5 rounded-full font-medium hover:bg-white/10 transition"
+              type="button"
+            >
+              Voir la vidéo
+            </button>
+          </div>
+        </div>
+        <div class="hidden lg:block absolute top-0 right-0 h-full w-1/2 overflow-hidden rounded-r-[2.5rem]">
+          <img
+            alt="Femme pratiquant le yoga dans une pose d'étirement"
+            class="w-full h-full object-cover object-center transform scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBksi0MNeuzVD-7n9fHahWy9btwUa8ZSZTQSccBhcxbbwiuy-pZFLRXLaPfMEUipic0CGGwRoDl__RubEwvU-kAjUa6uU4B9KimYTfr4kdVeUbpyEDyzuEkIyxfBJuBHflWFkPBYcXiVkTOEQura4nDJymrbnlevx_kkyuGpejP0HrySfFMIlTkQwW_sEZKrcSwn6Z8pIqxBO4JO_gy0ZoVj4wN6DnOyzPKRqSladI8eWIZQWlhAngEeHt1ZG5kYkHoKgscfLYvuKw"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent mix-blend-overlay"></div>
+        </div>
+      </div>
+    </header>
+    <section class="px-4 md:px-8 max-w-7xl mx-auto mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+          <img
+            alt="Femme faisant du yoga pour la flexibilité"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS3r9O5I-hbDYlGHSZzLVnih8wDlOE9lSvhf2glCH4nGEGDAquGbPHZrCyqdOSa_3A2q-OnYNTi_JmfBXHcEY0wO56_DwQH_aFFnFm7BTs5dWHb1W2hojSOrAyz4ufphJHcBCf2G6ouy6MpLiKVVgCMrsXuR5K6FxnfxyxswNGqrt7_wbehNhwThtTEUThVoDzgUJul-QXLPwNJ_mZAgcBAJN1EZULePWzLqUZ8M3nGGuxuRo1ug0z8zhvESgx5ma3P1gq2oShdwQ"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute top-6 left-6 right-6 flex justify-between items-start">
+            <span
+              class="bg-white/90 dark:bg-black/80 backdrop-blur text-black dark:text-white px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide"
+            >
+              Voir vidéo
+            </span>
+            <div class="w-10 h-10 bg-white dark:bg-black rounded-full flex items-center justify-center transition-transform group-hover:rotate-45">
+              <span class="material-icons text-sm text-black dark:text-white">arrow_outward</span>
+            </div>
+          </div>
+          <div class="absolute bottom-8 left-8">
+            <h3 class="text-2xl font-display text-white">Flexibilité Améliorée</h3>
+          </div>
+        </div>
+        <div class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+          <img
+            alt="Pose de yoga relaxante"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuCr9SCoJ8jGSeF8fwbRACKSWq0NyuZDmWVLRzE9pwM5w8au05E11FXLAMNTqlegfY9WNYSwHEcw4gzWkVHZiewhio97n5cARt_fpVW7obzO2TQdbmSqjbcUtemUSzy99zuKKLxHCPXyQfyGSxO9orZYKshz74foaAYfKfm0Y71KQJ-0l3HWpiQ9vATlNKkrIC_IMd9KQ_tG3gnqiyuExqIO-kAo3x_cR0GF0VGqzkWWXV3KKx47EejmkbVwczO7Gagh0Z-1XNQzo"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute top-6 left-6 right-6 flex justify-between items-start">
+            <span
+              class="bg-white/90 dark:bg-black/80 backdrop-blur text-black dark:text-white px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide"
+            >
+              Voir vidéo
+            </span>
+            <div class="w-10 h-10 bg-white dark:bg-black rounded-full flex items-center justify-center transition-transform group-hover:rotate-45">
+              <span class="material-icons text-sm text-black dark:text-white">arrow_outward</span>
+            </div>
+          </div>
+          <div class="absolute bottom-8 left-8">
+            <h3 class="text-2xl font-display text-white">Réduction du Stress</h3>
+          </div>
+        </div>
+        <div class="group relative h-[400px] rounded-3xl overflow-hidden">
+          <img
+            alt="Cours de yoga en groupe"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJCBnvA4IOQpT-dDdtYLdKh0rw5E2oPWpmA7_MI7Y3TKnBoqSxe6y1EBPE3WSLw1_5UxkjlwISQpeq1IxPEf5EM-HV_DNNUktYHJmlkxfpCoYPzilt5vDaCrbuLb6Q6qqBR_WoK44Zxt9ZXk52H378yXHSB2FYcxlsQDXDdR-UC-9hQBqdRO57UkpDPNwY4H4WAU0Ub6kEvkGqTRtlxgdK4YaY-T8g-3XA3NjinkguXTCA5bdK_z0zC9qXs4fuISCur0PDej8txZw"
+          />
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute top-6 left-6 right-6 flex justify-between items-start">
+            <span
+              class="bg-white/90 dark:bg-black/80 backdrop-blur text-black dark:text-white px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide"
+            >
+              Rejoignez-nous
+            </span>
+            <div class="w-10 h-10 bg-white dark:bg-black rounded-full flex items-center justify-center transition-transform group-hover:rotate-45">
+              <span class="material-icons text-sm text-black dark:text-white">arrow_outward</span>
+            </div>
+          </div>
+          <div class="absolute bottom-0 w-full p-8 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <h3 class="text-xl font-display text-white mb-4">Rejoignez un cours de yoga aujourd'hui !</h3>
+            <form class="flex gap-2" onsubmit="event.preventDefault()">
+              <input
+                class="flex-1 bg-transparent border border-white/50 rounded-full px-4 py-2 text-white placeholder-white/70 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                placeholder="Votre email"
+                type="email"
+              />
+              <button class="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap hover:bg-gray-100 transition" type="submit">
+                S'inscrire
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative py-24 overflow-hidden">
+      <div class="absolute top-1/2 left-0 w-full h-[600px] -translate-y-1/2 -z-10 opacity-20 pointer-events-none">
+        <svg class="w-full h-full text-secondary" fill="none" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M-100 300 C 200 600, 600 0, 1540 300"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="80"
+          ></path>
+        </svg>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
+        <span
+          class="inline-block px-4 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-dark text-xs font-semibold uppercase tracking-wide mb-6"
+        >
+          Témoignages
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-medium mb-4 text-gray-900 dark:text-white">Témoignages d'élèves</h2>
+        <p class="text-muted-light dark:text-muted-dark max-w-xl mx-auto mb-16">
+          Découvrez comment nos membres ont réduit leur stress et amélioré leur bien-être grâce à notre soutien et nos
+          conseils.
+        </p>
+        <div class="relative w-full h-[600px] md:h-[500px]">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md z-20">
+            <div class="relative">
+              <div class="w-24 h-24 mx-auto mb-6 rounded-full p-1 bg-white dark:bg-surface-dark shadow-xl relative z-10">
+                <div class="absolute inset-0 rounded-full border-2 border-primary animate-pulse"></div>
+                <img
+                  alt="Emily R."
+                  class="w-full h-full object-cover rounded-full"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLUrtVunRZabGOtriUbkFEJz3-BIr0eJi-JrJDuWWmR0zzRKlEtSLRtm6IL3QGBplnd3_zsJaSMreEI1E8tFtGWOAyv5L0oQVSGCqysyyb63jedaN1RFpinrQY8k7DUK0syUFuSRJc9qCgzNt18Q_iW6YJ7Em4qK4s8d5HWCIYNLW1YjgcBXKHKbkKrwyKjHTjNfI_4N-QPZYagEBoC6335prMrvlvLY3oMN1A72OHbnokv2y3X1b5WtwcLZkDTPJixH4zwCpc6Zk"
+                />
+              </div>
+              <div class="bg-gray-900 dark:bg-surface-light text-white dark:text-gray-900 p-8 rounded-3xl shadow-2xl relative">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gray-900 dark:bg-surface-light rotate-45"></div>
+                <p class="text-sm italic opacity-90 mb-4 leading-relaxed">
+                  "Rejoindre cette communauté de yoga a changé ma vie. Les instructeurs sont incroyablement compétents,
+                  et les cours m'ont aidée à trouver une paix intérieure et à améliorer ma flexibilité."
+                </p>
+                <div>
+                  <h4 class="font-display font-bold text-lg">Emily R.</h4>
+                  <span class="text-xs opacity-70 uppercase tracking-wider">Designer Graphique</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute top-10 left-[10%] w-16 h-16 rounded-full overflow-hidden border-2 border-white dark:border-surface-dark shadow-lg hidden md:block opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <img
+              alt="Student"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRNY-Tgym9ktOT2BTthoMMqw6rNZ-UJtcLBngenmOSlBlIJGXP1vh5wWcQorK597gUM3gONl7fopG6Qu_PVUwByE0WLBjDozMbUVNK7aDuloxjmA6qi7-7CzIyTIMXFAr7ChtcftIWpJGOO8LeZvZGHZLHKKt2R9ID1tJMtpI9uayFSx1ArIXXBtbd9FNlGYTzWNsT4_XrnU6GqP7wnpbkL3g7HbjPCQ5ArM_PUhkdwJ0sMXT_8SFO-wu-TqDppb65aN6bXcMlyRA"
+            />
+          </div>
+          <div
+            class="absolute top-20 right-[15%] w-20 h-20 rounded-full overflow-hidden border-2 border-white dark:border-surface-dark shadow-lg hidden md:block opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <img
+              alt="Student"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvF4pJWTE1eb8Mfv9HKvLb2Dyr-dDRE-p8pmtHQ-mBXv9VzN6wW5bA_XxmJJhtYt2j93NRhyUXwhMKIw4fMEstppYjFpLnQQ3N2booP6NYHOmJW0665cNSZeQNeRBTFBBcYfFJN1xjO9L3IBPa-TJTZUWBjA8B77HhG3sE2bhTZEIg3bbZgNjLZkyoCNIkVfsbvqRm4OLmgHGa7MOPOTB5WDIbT0gPDFXfuP7EC7ch9c3Vx0j6x2LobXCPCEArhs9aLeEYonspVkM"
+            />
+          </div>
+          <div
+            class="absolute bottom-20 left-[15%] w-20 h-20 rounded-full overflow-hidden border-2 border-white dark:border-surface-dark shadow-lg hidden md:block opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <img
+              alt="Student"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzXyixRiAUPUzs4C97ZgM3Y8mJMBZpX3sfJIRjNCaY79H7MhfX7tyOLMhjl5fWAx8mauvc_kAl_EP7ldHemvA65sttYiL1rbWaWjpuqsIhYYUDAr0KSQEbIViclKTOUyE0IzpACdLGUd6A75NLbZ2p114js5i1aHl-UAfg8Y7ESV5gVOiURxF3GG-1yajSx2v-KLGwYeAHSVR-tg35f4V5B52mGbks0m-uMFlAat1ByBXbgwLLwnBpedtOAHrGxSDswreykEQ6Gr4"
+            />
+          </div>
+          <div
+            class="absolute bottom-10 right-[10%] w-16 h-16 rounded-full overflow-hidden border-2 border-white dark:border-surface-dark shadow-lg hidden md:block opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <img
+              alt="Student"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnZT2Hpj2f6uftEv61ARZoln4G0GuZcsNV46lxX3N5NrNlJOSs0wWu24F6hWLnNyukga6BODUD779i-ytFtoeRTiFxnoSSk1K708-h20TMqpJRMar_i6gnNOAHeg6R8lSUi0r3ucyY_S2gYu9JqgP_6n-6Hu_eaGIMosFTPVXVczWaZTuEMOOHu9ofD-_inuAo260OIn2OZdhC7XTdUQDzMmNONJyZbcWzxrfzJlPkBPzLBeNqp_sHAP1ypdfYgWXmFMxNj_BfEqU"
+            />
+          </div>
+          <div
+            class="absolute top-[40%] left-[5%] w-14 h-14 rounded-full overflow-hidden border-2 border-white dark:border-surface-dark shadow-lg hidden lg:block opacity-50 hover:opacity-100 transition-opacity"
+          >
+            <img
+              alt="Student"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjMWN4abOWLle0aIO2zfNlfvmcaP3eeAYDvbAUjov-VMPmcG1eMJdwg4iIuEQgrfgkp-2KrsxahKzjMbGgpk9i-TGru8YtXvJRY3087Lf74XuK1wQ1k5EcctVv86rwL5LtlpqQFrW157A-bwOJvUaQFrFPnRYSiEG56ilzzcZfDRd_a00AFlEUYKRO1yNCjFVOsr0KYpu6-c5ATU9GuS4JLWO7GnZl9v2RFCjBrupCMXnH7WcNkBxqaEC1amFMmpwEF-3DHRriQ8"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-gray-50 dark:bg-surface-dark/30">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-dark text-xs font-semibold uppercase tracking-wide mb-6"
+          >
+            Questions &amp; Réponses
+          </span>
+          <h2 class="text-4xl md:text-5xl font-display font-medium mb-6 text-gray-900 dark:text-white leading-tight">
+            Foire Aux Questions (FAQ)
+          </h2>
+          <p class="text-muted-light dark:text-muted-dark mb-8">
+            Réponses à propos de nos cours de yoga. Si vous ne trouvez pas ce que vous cherchez, n'hésitez pas à nous
+            contacter pour plus d'informations.
+          </p>
+          <a
+            class="inline-flex items-center gap-2 font-medium text-black dark:text-white border-b border-black dark:border-white pb-1 hover:opacity-70 transition"
+            href="#"
+          >
+            Nous contacter <span class="material-icons text-sm">arrow_forward</span>
+          </a>
+        </div>
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer">
+            <details class="group">
+              <summary class="flex justify-between items-center font-medium text-lg list-none text-gray-900 dark:text-white">
+                <span>Que dois-je apporter pour un cours de yoga ?</span>
+                <span class="transition group-open:rotate-180">
+                  <span class="material-icons">expand_more</span>
+                </span>
+              </summary>
+              <p class="text-muted-light dark:text-muted-dark mt-4 text-sm leading-relaxed">
+                Apportez un tapis de yoga, une bouteille d'eau et une serviette. Des vêtements confortables permettant
+                une gamme complète de mouvements sont également recommandés. Certains studios fournissent des tapis,
+                mais il est toujours bon de vérifier à l'avance.
+              </p>
+            </details>
+          </div>
+          <div class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer">
+            <details class="group">
+              <summary class="flex justify-between items-center font-medium text-lg list-none text-gray-900 dark:text-white">
+                <span>Dois-je avoir une expérience préalable ?</span>
+                <span class="transition group-open:rotate-180">
+                  <span class="material-icons">expand_more</span>
+                </span>
+              </summary>
+              <p class="text-muted-light dark:text-muted-dark mt-4 text-sm leading-relaxed">
+                Absolument pas ! Nous avons des cours pour tous les niveaux, des débutants absolus aux yogis avancés.
+                Nos instructeurs vous guideront à chaque étape.
+              </p>
+            </details>
+          </div>
+          <div class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer">
+            <details class="group">
+              <summary class="flex justify-between items-center font-medium text-lg list-none text-gray-900 dark:text-white">
+                <span>Quels types de yoga proposez-vous ?</span>
+                <span class="transition group-open:rotate-180">
+                  <span class="material-icons">expand_more</span>
+                </span>
+              </summary>
+              <p class="text-muted-light dark:text-muted-dark mt-4 text-sm leading-relaxed">
+                Nous proposons du Hatha, Vinyasa, Yin Yoga et des cours de méditation. Consultez notre planning pour voir
+                les descriptions détaillées de chaque style.
+              </p>
+            </details>
+          </div>
+          <div class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer">
+            <details class="group">
+              <summary class="flex justify-between items-center font-medium text-lg list-none text-gray-900 dark:text-white">
+                <span>À quelle heure dois-je arriver ?</span>
+                <span class="transition group-open:rotate-180">
+                  <span class="material-icons">expand_more</span>
+                </span>
+              </summary>
+              <p class="text-muted-light dark:text-muted-dark mt-4 text-sm leading-relaxed">
+                Nous recommandons d'arriver au moins 10 à 15 minutes avant le début du cours pour vous installer
+                tranquillement et vous détendre avant de commencer.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="px-4 md:px-8 max-w-7xl mx-auto py-12 md:py-24">
+      <div class="bg-primary/20 dark:bg-primary/10 rounded-[2.5rem] p-12 md:p-24 relative overflow-hidden text-center">
+        <div class="absolute inset-0 w-full h-full pointer-events-none opacity-20 flex items-center justify-center">
+          <svg class="w-full h-full animate-[spin_60s_linear_infinite]" viewBox="0 0 1000 400">
+            <path
+              d="M 500, 200 m -150, 0 a 150,150 0 1,1 300,0 a 150,150 0 1,1 -300,0"
+              fill="transparent"
+              id="circlePath"
+            ></path>
+            <text class="curved-text text-primary dark:text-white text-xs">
+              <textPath href="#circlePath" startOffset="0%">
+                • Détente • Force • Paix • Harmonie • Bien-être • Santé • Souplesse • Équilibre • Joie • Détente • Force
+                • Paix • Harmonie • Bien-être • Santé • Souplesse • Équilibre • Joie •
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-display font-medium text-gray-900 dark:text-white mb-8">
+            Améliorez flexibilité, force et paix.
+          </h2>
+          <div
+            class="inline-flex bg-white dark:bg-surface-dark rounded-full p-2 pr-6 items-center shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+          >
+            <span class="bg-primary text-black dark:text-gray-900 px-6 py-3 rounded-full font-bold mr-4 text-sm"
+              >Commencer</span
+            >
+            <span class="font-medium text-gray-900 dark:text-white text-sm">Rejoignez-nous maintenant</span>
+            <span class="material-icons ml-2 text-gray-900 dark:text-white text-sm">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="px-4 md:px-8 max-w-7xl mx-auto pb-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <div
+              class="w-6 h-6 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black font-bold font-display text-xs"
+            >
+              S
+            </div>
+            <span class="font-display font-semibold text-lg tracking-tight">SÉRÉNITÉ YOGA</span>
+          </div>
+          <p class="text-sm text-muted-light dark:text-muted-dark">© 2023 Sérénité Yoga.<br />Tous droits réservés.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Inspiration</h4>
+          <ul class="space-y-2 text-sm text-muted-light dark:text-muted-dark">
+            <li><a class="hover:text-primary transition" href="#">Yoga en ligne</a></li>
+            <li><a class="hover:text-primary transition" href="#">Méditation</a></li>
+            <li><a class="hover:text-primary transition" href="#">Pilates en ligne</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Compagnie</h4>
+          <ul class="space-y-2 text-sm text-muted-light dark:text-muted-dark">
+            <li><a class="hover:text-primary transition" href="#">Notre mission</a></li>
+            <li><a class="hover:text-primary transition" href="#">L'équipe</a></li>
+            <li><a class="hover:text-primary transition" href="#">Carrières</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm uppercase tracking-wide">Contact</h4>
+          <p class="text-sm text-muted-light dark:text-muted-dark mb-2">123 Harmony Lane<br />Paris, France 75001</p>
+          <p class="text-sm text-muted-light dark:text-muted-dark">Tel: (123) 456-7890<br />Email: info@serenite.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

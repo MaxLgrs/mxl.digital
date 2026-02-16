@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Xurya - Énergie Renouvelable</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00C36F",
+              primaryDark: "#00a35c",
+              "background-light": "#F8F9FA",
+              "background-dark": "#111827",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1F2937",
+              "text-light": "#1F2937",
+              "text-dark": "#F3F4F6",
+              "muted-light": "#6B7280",
+              "muted-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-300">
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <span class="text-primary text-3xl material-icons-outlined">energy_savings_leaf</span>
+            <span class="font-bold text-xl tracking-tight dark:text-white">Xurya</span>
+          </div>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Accueil</a>
+            <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">À propos</a>
+            <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Fonctionnalités</a>
+            <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Services</a>
+            <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+          </div>
+          <div class="hidden md:flex items-center space-x-4">
+            <button class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary font-medium text-sm transition-colors">Connexion</button>
+            <button class="bg-primary hover:bg-primaryDark text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-lg shadow-primary/30">
+              Nous contacter
+            </button>
+            <button
+              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              onclick="document.documentElement.classList.toggle('dark')"
+            >
+              <span class="material-icons-outlined text-gray-600 dark:text-gray-300">brightness_6</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="relative rounded-3xl overflow-hidden h-[600px] w-full group">
+        <img
+          alt="Wind Turbines at Sunset"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFt0kTForKmPYol2CQ_Y9XaAMtsVqNmAgUW175kBqDzOTFwfmOV87ImCmMZj1aTWDX6AAtjqQlXbjqOBClo6ELczx-ileEtE_JoTryK1GybxpGT_ac08JZWAqR1_B1AVJ_yWPDBhSSdjt2aF_mcaUMGAkFI7phBpm00Iw-eX7H3sEinBvkO4MVGEJ-R7AMm3GwUUKxLLObOeCX4MyZ8gAeReUQjdM-v6qb96AKW0QPeeW30Eb7TFZuTHG6rwWJAp_95XUNqaFRt4"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+        <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-16">
+          <span class="text-white/80 text-sm font-medium mb-4 tracking-wider uppercase fade-in-up" style="animation-delay: 0.1s;">
+            #1 Fournisseur d'énergie verte
+          </span>
+          <h1 class="text-5xl md:text-7xl font-bold text-white max-w-2xl leading-tight mb-8 fade-in-up" style="animation-delay: 0.2s;">
+            Une Énergie Nouvelle <br />
+            <span class="text-white/90 font-light">pour le Futur</span>
+          </h1>
+          <div class="flex gap-6 fade-in-up" style="animation-delay: 0.3s;">
+            <a class="group flex items-center text-white border-b border-white pb-1 hover:text-primary hover:border-primary transition-colors" href="#">
+              Nous contacter
+              <span class="material-icons-outlined ml-2 text-sm transform group-hover:translate-x-1 transition-transform">north_east</span>
+            </a>
+            <a class="group flex items-center text-white border-b border-white pb-1 hover:text-primary hover:border-primary transition-colors" href="#">
+              Nos services
+              <span class="material-icons-outlined ml-2 text-sm transform group-hover:translate-x-1 transition-transform">north_east</span>
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block absolute top-16 right-16 w-64 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 fade-in-up" style="animation-delay: 0.4s;">
+          <div class="relative h-32 rounded-xl overflow-hidden mb-4">
+            <img
+              alt="Solar Project"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCQ9-wCQS4HTLhXPF8Q90MQuyWgQwUQURcGLCFjaFlrKpg-7CI5vVYDzeQOmAiyp6ZN4vJKhzrUxVL7hB-U0O6yth37A9UhS_c0BNxznM3-nCxknbncCmtPT8PxaD4sCUfyEtkBc-jZDUneYo3gjYVIMvUherO6m_GbxAteMlCiG31M-kiS_OGqZtjV2Bxoks3ROyAxeh4Fo3jt6jhZcd2iZUPcshZ6mSSrhZR81c9KI1tggDJNXBwwYOw3mLCzRAFfrrBA-Y7frI"
+            />
+            <div class="absolute top-2 right-2 p-1 bg-black/20 rounded-full">
+              <span class="material-icons-outlined text-white text-xs">more_horiz</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-end text-white">
+            <div>
+              <p class="text-xs text-white/70">Découvrir notre</p>
+              <p class="font-medium text-sm">Projet Récent</p>
+            </div>
+            <div class="bg-white/20 p-2 rounded-full flex items-center justify-center hover:bg-primary cursor-pointer transition-colors">
+              <span class="material-icons-outlined text-sm">arrow_outward</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative max-w-4xl ml-auto mr-8 -mt-20 z-10">
+        <div class="bg-white dark:bg-surface-dark rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left border border-gray-100 dark:border-gray-700">
+          <div>
+            <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">6 mil</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Revenus annuels nets de l'entreprise</p>
+          </div>
+          <div class="border-l-0 md:border-l border-gray-200 dark:border-gray-600 md:pl-8">
+            <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">315</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Projets complétés à travers le monde</p>
+          </div>
+          <div class="border-l-0 md:border-l border-gray-200 dark:border-gray-600 md:pl-8">
+            <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">120K</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Employés travaillant dans nos filiales</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+        <h2 class="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white max-w-md">
+          Focus sur la qualité, <span class="text-gray-400 dark:text-gray-500">nous maintenons la confiance client</span>
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-md text-sm leading-relaxed">
+          Nous assurons que chaque installation que nous construisons respecte des contrôles de qualité stricts. Des solutions durables pour un avenir écologique et renouvelable.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="group relative aspect-square rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 hover:shadow-lg transition-all cursor-pointer border border-transparent hover:border-gray-100 dark:hover:border-gray-600">
+          <div class="flex flex-col items-center">
+            <span class="material-icons-outlined text-primary text-3xl mb-2">eco</span>
+            <span class="font-bold text-gray-800 dark:text-gray-200 text-sm">TREND</span>
+            <span class="text-[10px] text-primary uppercase tracking-widest">MICRO</span>
+          </div>
+          <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="material-icons-outlined text-gray-400 text-sm">touch_app</span>
+          </div>
+        </div>
+        <div class="aspect-square rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+          <div class="flex items-center gap-2">
+            <span class="material-icons-outlined text-gray-800 dark:text-gray-200">public</span>
+            <span class="font-bold text-gray-800 dark:text-gray-200 text-sm">Telia Cygate</span>
+          </div>
+        </div>
+        <div class="aspect-square rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+            <span class="font-bold text-gray-800 dark:text-gray-200 text-sm">Business</span>
+          </div>
+        </div>
+        <div class="aspect-square rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 bg-gray-900 dark:bg-gray-100 rounded-full"></div>
+            <span class="font-bold text-gray-800 dark:text-gray-200 text-sm">headspace</span>
+          </div>
+        </div>
+        <div class="aspect-square rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+          <span class="font-bold text-gray-800 dark:text-gray-200 text-sm">Medtronic</span>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50 dark:bg-gray-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mb-4">
+            Nous offrons la qualité, <span class="text-gray-400 dark:text-gray-500">avec les<br />meilleurs matériaux et services</span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden">
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">layers</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sécurité multicouche</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Avec une sécurité en couches, nous assurons la sûreté de chaque unité fournie.</p>
+          </div>
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">verified</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contrôle qualité</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Chaque unité envoyée est vérifiée soigneusement dans les moindres détails.</p>
+          </div>
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">support_agent</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Service client fiable</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Notre service client est disponible 24 heures sur 24, avec du personnel qualifié.</p>
+          </div>
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">menu_book</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Manuel de maintenance</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Nous fournissons un guide qui peut être utilisé pour assurer un soin maximal.</p>
+          </div>
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">inventory_2</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Livraison sécurisée</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Chaque unité envoyée arrive rapidement et en toute sécurité, sans obstacles.</p>
+          </div>
+          <div class="bg-white dark:bg-surface-dark p-8 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+            <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-icons-outlined text-primary text-xl">smart_toy</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Basé sur l'IA</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Vous pouvez contrôler et visualiser chaque unité depuis votre téléphone, très facilement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mb-6">
+            Service de confiance, <span class="text-gray-400 dark:text-gray-500">pour vos besoins variés</span>
+          </h2>
+          <button class="bg-primary hover:bg-primaryDark text-white px-6 py-3 rounded-full text-sm font-medium transition-colors mb-12 flex items-center">
+            Nous contacter
+            <span class="material-icons-outlined ml-2 text-sm">north_east</span>
+          </button>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white dark:bg-surface-dark">
+              <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-2 block">01</span>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4 leading-tight">Panneaux solaires pour la maison</h3>
+              <a class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4" href="#">Voir les détails</a>
+            </div>
+            <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white dark:bg-surface-dark">
+              <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-2 block">02</span>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4 leading-tight">Panneaux solaires pour l'industrie</h3>
+              <a class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4" href="#">Voir les détails</a>
+            </div>
+            <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white dark:bg-surface-dark">
+              <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-2 block">03</span>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4 leading-tight">Panneaux solaires pour chargeurs</h3>
+              <a class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4" href="#">Voir les détails</a>
+            </div>
+            <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white dark:bg-surface-dark">
+              <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-2 block">04</span>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4 leading-tight">Générateur d'énergie éolienne</h3>
+              <a class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4" href="#">Voir les détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative h-[600px] rounded-3xl overflow-hidden group">
+          <img
+            alt="Technician holding solar panel"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR5p_O162gdMbt0TuGdJZ36a5XbSC5eiGg57RHxW-Fzrd0d1drpdGZT8Rozv6bG0hU-wsQuzQVS6txvQUBuTAYqua-EbmCU5i7fX9YxJB99F6dCcfnGBsVKR_s81LaXkzfGZfjq8uYvKzO_l1UT4UegxVz0IeLcd27uvRyLOBHvmhrEeDxFMsSCH4Bun_zqDSDUoLjMGtxJRI-he0MyQLnn-EpdLFlmAEmZ_QJG4zzW04aGxZxcGaZyhQooNkdDDtap9SFuT-4qeg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white">
+          Découvrez comment nous résolvons<br />
+          <span class="text-gray-400 dark:text-gray-500">les problèmes, droit au but</span>
+        </h2>
+      </div>
+      <div class="bg-gray-50 dark:bg-surface-dark rounded-3xl overflow-hidden flex flex-col lg:flex-row">
+        <div class="p-8 lg:p-16 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-8">
+              <span class="font-bold text-gray-900 dark:text-white text-xl">Medtronic</span>
+            </div>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              "Nous utilisons les services de Xurya pour la plupart de nos stations, c'est notre stratégie pour continuer d'augmenter le nombre d'usages de panneaux solaires pour nos stations, nous sommes très satisfaits des services de Xurya."
+            </p>
+            <button class="bg-primary hover:bg-primaryDark text-white px-5 py-2 rounded-full text-xs font-medium w-fit transition-colors mb-8">
+              Voir l'étude de cas
+            </button>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 dark:text-white text-sm">Jennifer Kolobaly</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">CTO EV Medtronic</p>
+          </div>
+        </div>
+        <div class="lg:w-1/2 relative h-64 lg:h-auto">
+          <img
+            alt="Solar Charging Station"
+            class="absolute inset-0 w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZpPzi6iY1MG54NLHDJHiaW8hDIlvdEdbJ6AL1hOwS5tsL7ZjZqv4DsYyZWxF_Dj_ELdiFGtQYKCemEIXsQGE_38b8f_dK-06ShVA8NV8-DKiP0Cr7ViHWQclyK-xNokFCbXgwzd12X6PKqzzQjfACjnq8hKx1eyTnJYb5SufsVUlki2jTPz3ZSi4EVpW8SoKDU36teKVy3PY1McBO5w3uwUXmxUAxmTaI0ENwQImWf8RYnOcT3daXiZrur1HrIYjGG20A_Bpeb0"
+          />
+        </div>
+      </div>
+      <div class="flex justify-center mt-8 gap-6 text-xs text-gray-400 dark:text-gray-500">
+        <div class="flex items-center gap-2 text-gray-900 dark:text-white font-medium cursor-pointer">
+          <div class="w-8 h-0.5 bg-primary"></div>
+          Station de recharge électrique
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+          <span class="material-icons-outlined text-xs">wb_sunny</span>
+          Panneaux solaires résidentiels
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+          <span class="material-icons-outlined text-xs">wind_power</span>
+          Énergie éolienne industrielle
+        </div>
+      </div>
+    </section>
+    <footer class="bg-black text-white pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start mb-20 gap-10">
+          <div class="max-w-lg">
+            <h2 class="text-3xl md:text-4xl font-medium mb-4">
+              Il est temps de soutenir le zéro pollution,<br />
+              <span class="text-gray-400">avec des ressources renouvelables</span>
+            </h2>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 text-sm text-gray-300">
+              <div class="flex items-center gap-2">
+                <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                Expérience de plus de 10 ans
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                Support des dernières technologies
+              </div>
+            </div>
+          </div>
+          <div class="max-w-xs">
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+              En augmentant l'efficacité et l'efficience de l'utilisation de l'électricité, l'utilisation de ressources renouvelables est très rentable pour tous les services industriels.
+            </p>
+            <button class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center">
+              Nous contacter
+              <span class="material-icons-outlined ml-2 text-sm">north_east</span>
+            </button>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-2">
+            <span class="text-primary text-2xl material-icons-outlined">energy_savings_leaf</span>
+            <span class="font-bold text-lg">Xurya</span>
+          </div>
+          <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-300">
+            <a class="hover:text-white transition-colors" href="#">Accueil</a>
+            <a class="hover:text-white transition-colors" href="#">À propos</a>
+            <a class="hover:text-white transition-colors" href="#">Fonctionnalités</a>
+            <a class="hover:text-white transition-colors" href="#">Services</a>
+            <a class="hover:text-white transition-colors" href="#">Contact</a>
+          </div>
+          <div class="flex gap-4">
+            <a class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400" href="#">
+              <span class="font-bold text-xs">in</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400" href="#">
+              <span class="font-bold text-xs">X</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400" href="#">
+              <span class="font-bold text-xs">f</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-gray-400" href="#">
+              <span class="material-icons-outlined text-sm">camera_alt</span>
+            </a>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+          <p>© 2024 Xurya Inc. Tous droits réservés</p>
+          <div class="flex gap-6">
+            <a class="hover:text-gray-300 transition-colors" href="#">Conditions de Service</a>
+            <a class="hover:text-gray-300 transition-colors" href="#">Politique de Confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

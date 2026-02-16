@@ -1,0 +1,44 @@
+:root {
+  --bg: #061824;
+  --bg-alt: #0c2231;
+  --text: #e9f4ff;
+  --muted: rgba(233, 244, 255, 0.7);
+  --accent: #42e6ff;
+  --accent-2: #7bffb0;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 35px 70px rgba(3, 10, 18, 0.55);
+}
+
+body {
+  background: radial-gradient(900px 600px at 80% 10%, rgba(66, 230, 255, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 10% 20%, rgba(123, 255, 176, 0.18), transparent 60%),
+    var(--bg);
+}
+
+.wind-lines {
+  position: relative;
+  border-radius: 22px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.wind-lines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+  opacity: 0.35;
+}
+
+.wind-lines > * {
+  position: relative;
+  z-index: 1;
+}
