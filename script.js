@@ -308,7 +308,6 @@
 
     const openPreview = (card) => {
       if (!previewOverlay || !previewFrame) return;
-      stopLivePreview();
       const url = card.getAttribute("data-portfolio-preview");
       if (!url) return;
 
@@ -359,29 +358,18 @@
     };
 
     previewCards.forEach((card) => {
+      // Load all live previews immediately
+      startLivePreview(card);
+
       card.addEventListener("click", () => openPreview(card));
-      card.addEventListener("mouseenter", () => {
-        clearTimeout(liveHoverTimeout);
-        liveHoverTimeout = setTimeout(() => startLivePreview(card), liveConfig.hoverDelay);
-      });
-      card.addEventListener("mouseleave", () => {
-        clearTimeout(liveHoverTimeout);
-        stopLivePreview(card);
-      });
-      card.addEventListener("focus", () => {
-        clearTimeout(liveHoverTimeout);
-        liveHoverTimeout = setTimeout(() => startLivePreview(card), liveConfig.hoverDelay);
-      });
-      card.addEventListener("blur", () => {
-        clearTimeout(liveHoverTimeout);
-        stopLivePreview(card);
-      });
     });
 
     const handleResize = () => {
-      if (activeLiveCard && activeLiveCard._live) {
-        applyIframeScale(activeLiveCard._live.iframe, activeLiveCard._live.container);
-      }
+      previewCards.forEach((card) => {
+        if (card._live) {
+          applyIframeScale(card._live.iframe, card._live.container);
+        }
+      });
       if (previewOverlay && !previewOverlay.hidden) {
         applyIframeFit(previewFrame, previewViewport);
       }
@@ -408,3 +396,38 @@
     });
   }
 })();
+
+/* ================================
+   DIRECTUS GLOBAL SETTINGS
+================================ */
+
+async function loadGlobalSettings() {
+  try {
+    const response = await fetch("https://directus.mxl.digital/items/global_settings");
+    const result = await response.json();
+    const data = result.data;
+
+    // Bouton Audit Gratuit (btn-secondary)
+    const auditBtn = document.querySelector(".btn-secondary");
+    if (auditBtn && data.primary_cta_label && data.primary_cta_link) {
+      auditBtn.textContent = data.primary_cta_label;
+      auditBtn.href = data.primary_cta_link;
+    }
+
+    // Footer
+    const footer = document.querySelector(".footer-text");
+    if (footer && data.footer_text) {
+      footer.textContent = data.footer_text;
+    }
+
+    // SEO Title
+    if (data.default_seo_title) {
+      document.title = data.default_seo_title;
+    }
+
+  } catch (error) {
+    console.error("Erreur chargement Directus :", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadGlobalSettings);
