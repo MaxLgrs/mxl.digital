@@ -348,12 +348,30 @@ footer {
   margin-bottom: 18px;
 }
 
+.video-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 16, 0.05) 0%, rgba(5, 8, 16, 0.68) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .video-frame::after {
   content: "";
   position: absolute;
   inset: 16px;
   border-radius: 14px;
   border: 1px dashed rgba(255, 255, 255, 0.3);
+  z-index: 3;
 }
 
 .play {
@@ -371,6 +389,11 @@ footer {
   left: 16px;
   font-size: 0.85rem;
   color: rgba(232, 238, 248, 0.9);
+  z-index: 4;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(5, 8, 16, 0.55);
 }
 
 .glass-stats {
